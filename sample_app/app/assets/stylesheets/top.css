@@ -1,0 +1,13 @@
+/* top.cssにだけ背景色変更をしたつもりが他のhtml.erbファイルにも影響
+----------------------------------------------------------------------------*/
+main {
+  background-color: yellow;
+}
+
+main h2 {
+  color: grey
+}
+
+main content {
+  color: green;
+}

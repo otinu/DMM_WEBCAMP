@@ -20,6 +20,10 @@
   box-sizing: border-box;
 }
 
+header, h1, nav, .list-comment {
+  font-family: 'Kaushan Script', cursive, sans-serif;
+}
+
 header {
   width: 90%;
   padding: 15px 0;
@@ -65,8 +69,61 @@ main {
   width: 200px;
   height:250px;
   margin: 10px;
+  position: relative;
 }
 
 .list-comment {
   width: 200px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.list-body {
+  display: block;
+
+  color: gray;
+  font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+}
+
+.list-title {
+  display: block;
+
+  font-size: 18px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* ここから、自分で作成
+----------------------------*/
+
+
+
+.edit-font {
+  background-color: #d8f5c4;
+}
+
+.edit-font {
+  color: #060606;
+}
+
+.new-font {
+  background-color: #5d2f8a;
+}
+
+.new-font  {
+  color: #0f0f0f;
+}
+
+.show-font {
+  background-color: #3a8b9c;
+}
+
+.show-font {
+  color: red;
 }
