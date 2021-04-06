@@ -7,11 +7,16 @@ class TodolistsController < ApplicationController
 
   def create
     # 1 . データを新規登録するためのインスタンス作成
-    list = List.new(list_params)
+    @list = List.new(list_params)
     # 2 . データをデータベースに保存するためのsaveメソッド実行
-    list.save
+   if @list.save
     # 3 . 投稿画面へリダイレクト
-    redirect_to todolist_path(list.id)
+     flash[:notice] = "successfully!"
+     redirect_to todolist_path(@list.id)
+   else
+     flash[:alert] = "no"
+     render action: :new
+   end
   end
 
   def index
@@ -27,9 +32,14 @@ class TodolistsController < ApplicationController
   end
 
   def update
-    list = List.find(params[:id])
-    list.update(list_params)
-    redirect_to todolist_path(list.id)
+    @list = List.find(params[:id])
+    if @list.update(list_params)
+     flash[:notice] = "successfully!"
+     redirect_to todolist_path(@list.id)
+   else
+     flash[:alert] = "no"
+     render action: :edit
+   end
   end
 
   def destroy
