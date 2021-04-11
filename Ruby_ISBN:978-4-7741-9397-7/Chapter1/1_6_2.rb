@@ -4,3 +4,5 @@ a = 'Hello World!'
 puts a
 b = 'こんにちわ'
 puts b
+
+puts a + b
