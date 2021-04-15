@@ -1,4 +1,4 @@
-UNITS = { m: 1.0, ft: 3.28, in: 39.37 }
+UNITS = { m: 1.0, ft: 3.28, in: 39.37 } #ハッシュクラス
 
 def convert_length(length, from: :m, to: :m)
   (length / UNITS[from] * UNITS[to]).round(2)
@@ -11,3 +11,6 @@ puts "convert_lengthの第二・第三引数のデフォルト値はシンボル
 
 puts convert_length(1000)
 puts "つまり、1000mを1000mに変換(?)することになる。"
+
+puts "定数UNITSのクラスを確認。"
+puts UNITS.class
