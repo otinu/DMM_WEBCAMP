@@ -6,3 +6,4 @@ h[:apple]
 h[:melon]
 
 puts h
+
