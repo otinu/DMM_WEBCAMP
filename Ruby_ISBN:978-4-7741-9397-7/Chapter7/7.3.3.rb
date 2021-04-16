@@ -9,3 +9,5 @@ end
 
 user = User.new("Alice")
 puts user.name
+
+user.name = "Bob"
