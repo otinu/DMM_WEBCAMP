@@ -3,13 +3,14 @@ class User
     @name = name
   end
 
-  # @nameを外部から参照するためのメソッド
-  def name
+  # @nameを外部から参照するためのメソッド。  いわゆる、ゲッター。
+  puts "ゲッターはattr_readerで置き換え可能"
     @name
   end
- 
-  # @nameを外部から変更するためのメソッド
-  def name = (value)
+
+  # @nameを外部から変更するためのメソッド　　いわゆる、セッター。
+  puts "セッターはatter_writerで置き換え可能"
+  def name=(value)
     @name = value
   end
 end
@@ -24,3 +25,8 @@ puts User.name
 user.name = "Bob"
 
 puts user.name
+
+puts " \n "
+puts "ゲッターとセッターを合わせたものがatter_accessor"
+
+#参照URL https://qiita.com/k-penguin-sato/items/5b75be386be4c55e3abf
