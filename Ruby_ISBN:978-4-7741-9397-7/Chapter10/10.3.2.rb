@@ -1,11 +1,11 @@
 puts "10.2.2.rb と処理の結果は全く同じ。"
-puts "こちらはProcオブジェクトを作成し、greetingメソッドに渡している。"
+puts "こちらはProcオブジェクトを作成し、greetingメソッドに渡している。\n "
 
 def greeting(&block)
   puts "おはよう"
   text = block.call("Hello")
   puts text
-  puts "こんばんは"
+  puts "こんばんは\n "
 end
 
 #Procオブジェクトを作成
