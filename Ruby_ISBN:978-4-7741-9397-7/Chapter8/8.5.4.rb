@@ -19,9 +19,9 @@ class Tempo
 
   def <=> (other)
     if other.is_a?(Tempo)
-      bpm <=> other.bpm
+      bpm <=> other.bpm    #ここで実際の比較が行われる。
     else
-      nil
+      nil  #ここをtrueに変えても、結果は変わらない ⇒ ここは一度も通らない。
     end
   end
 
@@ -32,6 +32,13 @@ puts "問題なく、比較演算子を利用できている"
 t_120 = Tempo.new(120)
 t_180 = Tempo.new(180)
 
+#おそらく、下記はt_120とt_180を単に比較しているわけではない。
+#t_120オブジェクトに「>」や「<=」メソッドを使って(引数にt_180オブジェクトを渡す)、
+#<=>メソッドを呼び出している。
+
+#bpm <=> other.bpm　について
+#おそらく、bpmは呼び出した側のオブジェクトのbpm(つまり、t_120のbpm)を指す。
+#otherには引数として渡されたt_180が格納されている。そのため、other.bpmの形で指定する。
 puts t_120 > t_180
 puts t_120 <= t_180
 puts t_180 == t_120

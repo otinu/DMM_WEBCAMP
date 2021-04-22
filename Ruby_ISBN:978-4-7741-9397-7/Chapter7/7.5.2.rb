@@ -29,3 +29,5 @@ foo = Foo.new
 
 puts "5回目のputs"
 puts foo.baz
+
+puts "「じゃあ、どうやってFoo.newをしてからクラスメソッドを呼び出せるのか」 の説明が7.5.3"
