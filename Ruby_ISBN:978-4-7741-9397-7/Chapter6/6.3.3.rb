@@ -1,6 +1,6 @@
 puts "【キャプチャに名前を付与】\n "
 text = "私の誕生日は1977年7月17日です。"
-m = /(?<year>\d+)年(?<month>\d+)月(?<day>\d+)日/.match(text)
+m = text.match(/(?<year>\d+)年(?<month>\d+)月(?<day>\d+)日/)
 
 puts "【シンボルで名前を指定・取得】"
 puts m[:year]
