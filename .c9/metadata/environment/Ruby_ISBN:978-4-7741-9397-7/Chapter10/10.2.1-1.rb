@@ -1,0 +1,1 @@
+{"filter":false,"title":"10.2.1-1.rb","tooltip":"/Ruby_ISBN:978-4-7741-9397-7/Chapter10/10.2.1-1.rb","ace":{},"undoManager":{"mark":-1,"position":-1,"stack":[]},"timestamp":1618735322834,"hash":"da94edb3b1335ad0809f91f21e1d654cd7583bc5"}
